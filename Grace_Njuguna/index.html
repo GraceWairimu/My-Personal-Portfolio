@@ -1,0 +1,154 @@
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Personal Portfolio Website</title>
+        <link rel="stylesheet" href="portfolio.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    </head>
+    <body>
+
+
+
+        <div id="header" >
+            <div class="container">
+                <nav>
+                    <h2 class="logo">Portfolio</h2>
+                    <ul id="sidemenu">
+                        <li><a href="#header">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#service">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    
+                    </ul>
+                </nav>
+                <div class="header-text">
+                    <p>Front End Developer</p>
+                    <h1>Hello,I'm <span>Grace</span><br>Wairimu.</h1>
+                </div>
+            </div>
+        </div>
+
+
+
+
+        <div id="about">
+            <div class="container">
+                <div class="row">
+                    <div class="about-col-1">
+                        <img src="Images/About me.jpg" width="600px" height="600px">
+                    </div>
+                    <div class="about-col-2">
+                        <h1 class="sub-title">About Me</h1>
+                        <p>
+As a student passionate about front-end development, I'm dedicated to honing my skills in creating compelling and user-friendly web experiences. Proficient in HTML, CSS, and JavaScript, I'm actively expanding my knowledge to include modern frameworks like React and Angular.
+<br><br>
+Driven by a thirst for knowledge, I am committed to continuous learning, always seeking out new challenges and opportunities to grow. My enthusiasm for pushing the boundaries of web development motivates me to stay updated on the latest trends and technologies in the field.
+<br><br>
+I thrive in collaborative settings where ideas are exchanged freely and creativity flourishes. By working closely with peers and mentors, I aim to contribute meaningfully to projects while gaining valuable real-world experience.
+
+                        </p>
+                        <br><br>
+                        <div class="tab-titles">
+                            <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                            <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                            <p class="tab-links" onclick="opentab('education')">Education</p>
+                        </div>
+                        <div class="tab-contents active-tab" id="skills">
+                            <ul>
+                                <li><span>HTML</span><br></li>
+                                <li><span>CSS</span><br></li>
+                                <li><span>JavaScript</span><br></li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="experience">
+                            <ul>
+                                <li><span>Computer Instructor</span><br>Smart Kids Nairobi,Kenya</li>
+                                <li><span>Polling Clerk</span><br>Independent Electoral and Boundaries Commission</li>
+                            </ul>
+                        </div>
+                        <div class="tab-contents" id="education">
+                            <ul>
+                                <li><span>Bsc Mathematics and Computer Science</span><br>Jomo Kenyatta University of Agriculture and Technology(JKUAT)</li>
+                                <li><span>Web Development Bootcamp</span><br>Memoi Africa</li>
+                                <li><span>International Computer Driving License</span><br>Institute of Advanced Technology(IAT),Nairobi</li>
+                                <li><span>Highschool Diploma</span><br>St Mary's Girls' High School,Igoji-Meru</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div id="service">
+            <div class="title">
+                <h2>My Services</h2>
+            </div>
+            <div class="box">
+                <div class="card">
+                    <i class="fa-solid fa-code"></i>
+                    <h5>Web Development</h5>
+                    <div class="pra">
+                        <p>I specialize in crafting websites that captivate and convert. With a keen eye for detail and a passion for innovation, I breathe life into your ideas, turning visions into immersive online experiences.</p>
+                    <p style="text-align: center;">
+                    </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div id="contact">
+            <div class="container">
+                <div class="row">
+                    <div class="contact-left">
+                        <h1 class="sub-title">Contact Me</h1>
+                        <p><i class="fa-regular fa-envelope"></i>gracejacintawairimu@gmail.com</p>
+                        <p><i class="fa-solid fa-phone"></i>+254 704023611</p>
+                        <div class="social-icons">
+                            <a href="#"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="#"><i class="fa-brands fa-twitter"></i></a>
+                            <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+                        </div>
+                        <a href="Images/GRACE NJUGUNA CV(1) (1).pdf" download class="btn btn2">Download CV</a>
+                    </div>
+                    <div class="contact-right">
+                        <form>
+                            <input type="text" name="Name" placeholder="Enter your Name" required>
+                            <input type="email" name="Email" placeholder="Enter your Email" required>
+                            <textarea name="Message" rows="6" placeholder="Your Message"></textarea>
+                            <button type="submit" class="btn btn2">SUBMIT</button>
+                        </form>
+                    </div>
+                </div>
+                <div class="copyright">
+                    <p><i class="fa-regular fa-copyright"></i>Copyright by Grace Wairimu</p>
+                </div>
+            </div>
+
+
+        <script>
+            var tablinks=document.getElementsByClassName("tab-links");
+            var tabcontents=document.getElementsByClassName("tab-contents");
+            function opentab(tabname){
+                for(tablink of tablinks){
+                    tablink.classList.remove("active-link");
+                }
+                for(tabcontent of tabcontents){
+                    tabcontent.classList.remove("active-tab");
+                }
+                event.currentTarget.classList.add("active-link");
+                document.getElementById(tabname).classList.add("active-tab")
+
+            }
+            
+
+
+
+        </script>
+
+    </body>
+    </html>
